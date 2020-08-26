@@ -15,13 +15,13 @@ using System.Reflection;
 
 namespace HttpClientWrapper
 {
-    public class HttpClientWrapper
+    public class ApiClient
     {
         public virtual string ContentType { get; set; }
         public virtual bool ReadString { get; set; }
         public HttpClient client { get; set; }
 
-        public HttpClientWrapper(string baseurl, bool addheaders = true)
+        public ApiClient(string baseurl, bool addheaders = true)
         {
             client = new HttpClient();
             client.BaseAddress = new Uri(baseurl);
